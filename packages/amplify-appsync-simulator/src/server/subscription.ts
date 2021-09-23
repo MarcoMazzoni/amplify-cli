@@ -37,9 +37,12 @@ export class SubscriptionServer {
   private realtimeSocketServer: Server;
   url: string;
   private port: number;
+  private host: string;
 
   constructor(private config: AppSyncSimulatorServerConfig, private appSyncServerContext: AmplifyAppSyncSimulator) {
     this.port = config.wsPort;
+    this.host = config.host ? config.host : getLocalIpAddress();
+
     this.mqttWebSocketServer = createHTTPServer();
 
     this.mqttServer = new MQTTServer({
@@ -83,7 +86,7 @@ export class SubscriptionServer {
 
     return await e2p(server, 'listening').then(() => {
       const address = server.address() as AddressInfo;
-      this.url = `ws://${getLocalIpAddress()}:${address.port}/`;
+      this.url = `ws://${this.host}:${address.port}/`;
       return server;
     });
   }

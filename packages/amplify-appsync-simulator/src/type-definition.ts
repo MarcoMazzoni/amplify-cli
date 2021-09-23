@@ -129,6 +129,7 @@ export type AmplifyAppSyncSimulatorConfig = {
 export type AppSyncSimulatorServerConfig = {
   port?: number;
   wsPort?: number;
+  host?: string;
 };
 
 export type AmplifyAppSyncSimulatorRequestContext = {

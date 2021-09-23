@@ -43,6 +43,7 @@ export class AmplifyAppSyncSimulator {
     serverConfig: AppSyncSimulatorServerConfig = {
       port: 0,
       wsPort: 0,
+      host: "0"
     },
   ) {
     this._serverConfig = serverConfig;

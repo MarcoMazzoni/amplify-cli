@@ -1,10 +1,10 @@
 {
-  "name": "amplify-appsync-simulator",
+  "name": "@conio/amplify-appsync-simulator",
   "version": "1.27.7",
   "description": "An AppSync Simulator to test AppSync API.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aws-amplify/amplify-cli.git",
+    "url": "https://github.com/MarcoMazzoni/amplify-cli.git",
     "directory": "packages/amplify-appsync-simulator"
   },
   "author": "Amazon Web Services",
@@ -64,7 +64,7 @@
     "@types/node": "^12.12.6",
     "@types/pino": "^6.3.11",
     "@types/ws": "^7.4.4",
-    "amplify-graphiql-explorer": "1.6.1"
+    "@conio/amplify-graphiql-explorer": "1.6.1"
   },
   "jest": {
     "testRunner": "jest-circus/runner",
